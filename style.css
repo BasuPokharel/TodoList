@@ -76,10 +76,11 @@
 /* Media queries begins from here */
 @media (max-width: 500px) {
   .container {
-    align-items: start;
+    align-items: center;
   }
   .todo-container {
     margin: 1% 1%;
+    height: 90vh;
   }
 }
 @media (max-width: 380px) {
