@@ -9,12 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background: linear-gradient(135deg, #8052e1, #d161ff);
 }
 .todo-container {
   width: 30vw;
+  min-width: 350px;
+  min-height: 300px;
   height: 60vh;
-  background-color: green;
+  background-color: white;
 }
 .input-box {
   background-color: yellow;
@@ -22,13 +24,19 @@
   text-align: center;
 }
 .input-box input {
-  padding: 5px;
+  padding: 7px 7px;
   outline: none;
   width: 70%;
+  color: #111111;
+  border: 2px solid #d1d3d4;
+}
+.input-box input:focus {
+  outline: none;
+  border-color: #8052ec;
 }
 .input-box button {
-  background-color: rgb(9, 106, 234);
-  padding: 7px 8px;
+  background-color: #8052ec;
+  padding: 8px 8px;
   color: white;
   border-radius: 4px;
   border: none;
@@ -36,8 +44,8 @@
 
 /* //List is going to be added here */
 #lists {
-  background-color: rgb(255, 255, 255);
-  color: white;
+  border-bottom: 2px solid grey;
+  background-color: rgb(240, 233, 233);
   width: 100%;
   margin: auto;
   padding: 5px 25px;
@@ -46,7 +54,8 @@
   align-items: center;
 }
 .button {
-  background-color: rgb(9, 106, 234);
+  background-color: #8052ec;
+
   padding: 7px 8px;
   color: white;
   border-radius: 4px;
@@ -59,4 +68,23 @@
 }
 .list-text {
   color: black;
+}
+.on-complete {
+  text-decoration: line-through;
+}
+
+/* Media queries begins from here */
+@media (max-width: 500px) {
+  .container {
+    align-items: start;
+  }
+  .todo-container {
+    margin: 1% 1%;
+  }
+}
+@media (max-width: 380px) {
+  .todo-container {
+    min-width: 250px;
+    min-height: 300px;
+  }
 }

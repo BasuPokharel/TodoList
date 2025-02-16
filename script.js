@@ -21,6 +21,7 @@ const accept_Add = () => {
     a.appendChild(c);
 
     add_box.appendChild(a);
+    document.querySelector(".input-box input").value = "";
   }
 };
 
@@ -29,8 +30,8 @@ const remove = (evt) => {
   parent.removeChild(evt.target.parentElement);
 };
 const done = (evt) => {
-  // console.log(evt.target.innerText);
+  console.log(evt.target.innerText);
   let a = evt.target;
-  a.innerHTML = `✔<del>${a.innerText}</del>`;
+  a.classList.toggle("on-complete");
 };
 submit.addEventListener("click", accept_Add);
